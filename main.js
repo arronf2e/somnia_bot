@@ -3,6 +3,7 @@ import path from 'path';
 import fs from 'fs';
 import { fileURLToPath } from 'url';
 import chalk from 'chalk';
+import cron from 'node-cron';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
@@ -79,6 +80,7 @@ async function startWorkers() {
 }
 
 // 主程序启动
+// 主程序启动
 function main() {
   console.log(chalk.bold.green("=================== SOMNIA 自动机器人 ==================="));
   
@@ -87,6 +89,17 @@ function main() {
     process.exit(1);
   }
 
+  // 添加定时任务
+  // 每天北京时间早上16:30点执行 (UTC+8)，可以根据自己的时间更新
+  cron.schedule('30 16 * * *', () => {
+    console.log(chalk.cyan(`\n🕒 ${new Date().toLocaleString()} 触发定时任务`));
+    startWorkers();
+  }, {
+    scheduled: true,
+    timezone: "Asia/Shanghai"
+  });
+
+  // 立即执行一次
   startWorkers();
 }
 
