@@ -22,5 +22,5 @@ node start
 - 定时执行
 - 多线程执行
 
-基于 [https://github.com/ziqing888/Somnia-bot](https://github.com/ziqing888/Somnia-bot) 、[https://github.com/vVANare/somnia-testnet-bot/)(https://github.com/vVANare/somnia-testnet-bot/) 缝合
+基于 [https://github.com/ziqing888/Somnia-bot](https://github.com/ziqing888/Somnia-bot) 、[https://github.com/vVANare/somnia-testnet-bot/](https://github.com/vVANare/somnia-testnet-bot/) 缝合
 
