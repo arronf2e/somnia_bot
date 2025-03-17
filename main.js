@@ -1,7 +1,10 @@
 import { Worker } from 'worker_threads';
 import path from 'path';
 import fs from 'fs';
+import { fileURLToPath } from 'url';
 import chalk from 'chalk';
+
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 // 配置文件
 const config = {
