@@ -1,13 +1,7 @@
-import dotenv from "dotenv";
 import { Worker } from 'worker_threads';
-import { fileURLToPath } from 'url';
 import path from 'path';
 import fs from 'fs';
 import chalk from 'chalk';
-
-
-const __dirname = path.dirname(fileURLToPath(import.meta.url));
-dotenv.config({ path: path.join(__dirname, '.env') });
 
 // 配置文件
 const config = {
