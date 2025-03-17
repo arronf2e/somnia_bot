@@ -1,0 +1,15 @@
+{
+  "name": "somnia_bot",
+  "version": "1.0.0",
+  "main": "bot.js",
+  "type": "module",
+  "scripts": {
+    "start": "node bot.js"
+  },
+  "dependencies": {
+    "axios": "^1.8.3",
+    "chalk": "^5.3.0",
+    "ethers": "^6.13.5",
+    "socks-proxy-agent": "^8.0.5"
+  }
+}
